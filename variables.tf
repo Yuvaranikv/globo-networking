@@ -20,6 +20,11 @@ variable "cidr_block" {
   default     = "10.42.0.0/16"
 }
 
+variable "billing_code" {
+  type        = string
+  description = "(required) billing_code for newtwork resourses"
+}
+
 variable "public_subnets" {
   type        = map(string)
   description = "(Optional) Map of public subnets to create with CIDR blocks. Key will be used as subnet name with prefix. Default: {subnet-1 ="
@@ -27,5 +32,5 @@ variable "public_subnets" {
     public-1 = "10.42.10.0/24"
     public-2 = "10.42.11.0/24"
   }
-}
 
+}
